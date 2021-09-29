@@ -7,7 +7,9 @@ class NavBarSimple extends Component {
         this.state = {
             message: "Hello, guest!",
             buttonText: "Log In"
-        }
+        };
+        // for larger applications binding event to this is better for performance
+        // this.handleClick = this.handleClick.bind(this)
     }
 
     handleClick() {
@@ -28,6 +30,8 @@ class NavBarSimple extends Component {
                 <h1>My Gallery</h1>
                 <span className="margin-right">{this.state.message}</span>
                 <button onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                {/* below reference to binding event to 'this' in constructor */}
+                {/* <button onClick={this.handleClick}>{this.state.buttonText}</button> */}
             </div>
         )
     }
