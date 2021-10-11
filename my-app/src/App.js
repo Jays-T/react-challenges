@@ -7,6 +7,8 @@ import ConditionalRenderingFunctional from './components/ConditionalRenderingFun
 import ConditionalRenderingClass from './components/ConditionalRenderingClass';
 import NestingComponents from './components/NestingComponents';
 import NavBar from './components/NavBar';
+import RenderList from './components/RenderList';
+import Content from './components/Content';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       {/* <NavBarSimple /> */}
       <NavBar />
       <Sidebar word="World" first="Photos" second="Illustrations" third="Paintings"/>
+      <Content />
       {/* <ConditionalRenderingFunctional connected={true} /> */}
       {/* <ConditionalRenderingClass isLoaded={false} /> */}
       {/* <NestingComponents /> */}

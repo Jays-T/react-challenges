@@ -1,4 +1,5 @@
 import React from 'react';
+import RenderList from './RenderList';
 import css from './css/Sidebar.module.css';
 
 export default function Sidebar(props) {
@@ -8,6 +9,8 @@ export default function Sidebar(props) {
             <a href = "#." target = "_blank">My {props.first}</a>
             <a href = "#." target = "_blank">My {props.second}</a>
             <a href = "#." target = "_blank">My {props.third}</a>
+            <hr />
+            <RenderList /> 
         </div>
     );
 }
