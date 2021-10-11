@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import NavBarForm from './user/NavBarForm'
-import UserData from './user/UserData'
+import React, { Component } from 'react';
+import NavBarForm from './user/NavBarForm';
+import UserData from './user/UserData';
+import css from './css/NavBarForm.module.css';
 
-export class NestingComponents extends Component {
+export class NavBar extends Component {
     constructor(props) {
         super(props)
-    
+
         this.state = {
-             isLoaded: false,
-             isLoggedIn: false
+            isLoggedIn: false
         }
     }
-    
+
     handleSignInOut = () => {
         this.setState(prevState => {
             return {
@@ -23,8 +23,9 @@ export class NestingComponents extends Component {
 
     render() {
         return (
-            <div>
-                <UserData isLoaded={this.state.isLoaded} />
+            <div className={css.NavBar}>
+                <h1>My Gallery</h1>
+
                 <NavBarForm 
                     isLoggedIn={this.state.isLoggedIn}
                     handleSignInOut={this.handleSignInOut}
@@ -34,4 +35,5 @@ export class NestingComponents extends Component {
     }
 }
 
-export default NestingComponents
+export default NavBar
+
