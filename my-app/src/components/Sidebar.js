@@ -1,6 +1,7 @@
 import React from 'react';
 import RenderList from './RenderList';
 import css from './css/Sidebar.module.css';
+import LifeCyclesCWU from './LifeCyclesCWU';
 
 export default function Sidebar(props) {
     return (
@@ -11,6 +12,7 @@ export default function Sidebar(props) {
             <a href = "#." target = "_blank">My {props.third}</a>
             <hr />
             <RenderList /> 
+            <LifeCyclesCWU />
         </div>
     );
 }
